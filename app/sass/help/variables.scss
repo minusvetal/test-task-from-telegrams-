@@ -1,14 +1,21 @@
 $breakpoints: (
-	'xl': 1920px,
-	'lg': 1280px,
-	'md': 768px,
-	'sm': 480px,
-	'xs': 460px,
+	"xl": 1920px,
+	"lg": 1280px,
+	"md": 768px,
+	"sm": 480px,
+	"xs": 460px,
 );
 
 $black: #000000;
-$white: #FFFFFF;
+$white: #ffffff;
 
-$base-font: 'Font';
+$color-bg: #fbfbfd;
+
+$color-nav: #6078ff;
+
+$blue: #5167e5;
+$title: #1c1c1c;
+
+$base-font: "museo_sans", sans-serif;
 
 $base-transition: all 0.3s ease;

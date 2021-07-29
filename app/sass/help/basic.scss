@@ -70,10 +70,17 @@ html {
 
 body {
 	font-family: $base-font;
+	font-weight: 300;
 
 	&.overflow {
 		overflow: hidden;
 	}
+}
+
+.container {
+	max-width: 1160px;
+	padding: 0 10px;
+	margin: 0 auto;
 }
 
 a {
@@ -141,17 +148,12 @@ select {
 
 // media
 @media (min-width: 768px) {
-
 }
 @media (min-width: 1024px) {
-
 }
 @media (min-width: 1200px) {
-
 }
 @media (min-width: 1360px) {
-
 }
 @media (min-width: 1440px) {
-
 }
