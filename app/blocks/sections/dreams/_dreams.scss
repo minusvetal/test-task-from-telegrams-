@@ -1,3 +1,125 @@
 .dreams {
-	background-color: $bg;
+	padding-top: 6.6rem;
+	padding-bottom: 10rem;
+	background-color: $color-bg;
+}
+.dreams-container {
+	@include flex-between-center;
+}
+.dreams-users {
+	display: flex;
+	width: 45.5rem;
+	height: 45.5rem;
+	position: relative;
+	background-image: url("../../../images/dreams/ellipse-bg.png");
+	background-size: cover;
+	animation-name: yoyo;
+	animation-duration: 10s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	&__item {
+		width: 10rem;
+		height: 10rem;
+		overflow: hidden;
+		&:nth-child(1) {
+			.dreams-users__img {
+				position: absolute;
+				top: 7%;
+				left: 13%;
+				width: 7rem;
+				height: 7rem;
+			}
+		}
+		&:nth-child(2) {
+			.dreams-users__img {
+				position: absolute;
+				top: -2%;
+				right: 30%;
+				width: 5rem;
+				height: 5rem;
+			}
+		}
+		&:nth-child(3) {
+			.dreams-users__img {
+				position: absolute;
+				top: 9%;
+				right: 3%;
+				width: 7.8rem;
+				height: 7.8rem;
+			}
+		}
+		&:nth-child(4) {
+			.dreams-users__img {
+				position: absolute;
+				bottom: 40%;
+				right: 9%;
+				width: 4.6rem;
+				height: 4.6rem;
+			}
+		}
+		&:nth-child(5) {
+			.dreams-users__img {
+				position: absolute;
+				bottom: 4%;
+				right: 7%;
+				width: 7rem;
+				height: 7rem;
+			}
+		}
+		&:nth-child(6) {
+			.dreams-users__img {
+				position: absolute;
+				bottom: 15%;
+				right: 39%;
+				width: 7rem;
+				height: 7rem;
+			}
+		}
+		&:nth-child(7) {
+			.dreams-users__img {
+				position: absolute;
+				bottom: 8%;
+				left: 6%;
+				width: 7.8rem;
+				height: 7.8rem;
+			}
+		}
+		&:nth-child(8) {
+			.dreams-users__img {
+				position: absolute;
+				top: 45%;
+				left: 8%;
+				width: 5.1rem;
+				height: 5.1rem;
+			}
+		}
+		&:nth-child(9) {
+			.dreams-users__img {
+				position: absolute;
+				top: 28%;
+				right: 32%;
+				width: 14.2rem;
+				height: 14.2rem;
+			}
+		}
+	}
+	&__img {
+		width: 5rem;
+		height: 5rem;
+		border-radius: 100%;
+		object-fit: cover;
+		&:nth-child(2) {
+			width: 10rem;
+			height: 10rem;
+		}
+	}
+}
+
+@keyframes yoyo {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
