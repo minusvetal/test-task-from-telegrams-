@@ -1,0 +1,31 @@
+.partners {
+	@include flex-between-center;
+	padding-top: 4rem;
+	padding-bottom: 6rem;
+
+	@media (min-width: 768px) {
+		padding-top: 8rem;
+		padding-bottom: 6rem;
+	}
+	@media (min-width: 1024px) {
+		padding-top: 8rem;
+		padding-bottom: 7rem;
+	}
+
+	.partners-items {
+		@include flex-between-center;
+		&__img {
+			width: 8rem;
+			height: 2.5rem;
+			object-fit: contain;
+			@media (min-width: 768px) {
+				width: 12rem;
+				height: 4rem;
+			}
+			@media (min-width: 1024px) {
+				width: 19rem;
+				height: 5.7rem;
+			}
+		}
+	}
+}

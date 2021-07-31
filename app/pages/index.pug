@@ -1,4 +1,5 @@
 extends ../layouts/default
+include ../blocks/utils/mixins
 
 block head
 	- var pageTitle = '';
@@ -8,6 +9,10 @@ block header
 
 block content
 	main.main
+		include ../blocks/sections/partners/_partners
+		include ../blocks/sections/advantages/_advantages
+		include ../blocks/sections/dreams/_dreams
+		
 
 block footer
-	include ../blocks/footer/footer		
+	include ../blocks/footer/footer

@@ -1,10 +1,11 @@
 module.exports = [
-  './gulpTasks/deploy.js',
-  './gulpTasks/images.js',
-  './gulpTasks/libs.js',
-  './gulpTasks/pug.js',
-  './gulpTasks/sass.js',
-  './gulpTasks/script.js',
-  './gulpTasks/entries.js',
-  './gulpTasks/watch.js'
+	"./gulpTasks/deploy.js",
+	"./gulpTasks/images.js",
+	"./gulpTasks/libs.js",
+	"./gulpTasks/pug.js",
+	"./gulpTasks/sass.js",
+	"./gulpTasks/script.js",
+	"./gulpTasks/entries.js",
+	"./gulpTasks/svg.js",
+	"./gulpTasks/watch.js",
 ];

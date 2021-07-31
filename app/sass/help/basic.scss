@@ -78,8 +78,9 @@ body {
 }
 
 .container {
-	max-width: 1160px;
-	padding: 0 10px;
+	max-width: 1180px;
+	width: 100%;
+	padding: 0 2rem;
 	margin: 0 auto;
 }
 
@@ -144,6 +145,16 @@ select {
 .scroll-wrap::-webkit-scrollbar-thumb {
 	background-color: rgba(0, 0, 0, 0.75);
 	border-radius: 2px;
+}
+
+// icon
+.icon-svg {
+	width: 2rem;
+	height: 2rem;
+	fill: $black;
+	&:hover {
+		fill: rgb(76, 0, 255);
+	}
 }
 
 // media

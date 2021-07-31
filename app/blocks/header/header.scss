@@ -1,15 +1,19 @@
 .header {
 	padding-top: 30px;
 	background-color: #fbfbfd;
+	position: relative;
+	.icon-cart {
+		fill: $white;
+	}
 }
 .nav {
 	@include flex-between-center;
 	&__menu {
 		@include flex-between-center;
 	}
-	padding-bottom: 4rem;
+	padding-bottom: 0;
 	@media (min-width: 768px) {
-		padding-bottom: 6rem;
+		padding-bottom: 6;
 	}
 	@media (min-width: 1024px) {
 		padding-bottom: 10rem;
@@ -71,14 +75,13 @@
 
 .header-description {
 	@include flex-center;
-	padding-bottom: 1.5rem;
+	padding-bottom: 1rem;
 	@media (min-width: 768px) {
 		@include flex-center;
-		padding-bottom: 3rem;
+		padding-bottom: 2.5rem;
 	}
 	@media (min-width: 1024px) {
 		@include flex-between-center;
-
 		padding-bottom: 4.5rem;
 	}
 
@@ -88,7 +91,7 @@
 			flex: 0 0 50rem;
 		}
 		@media (min-width: 1024px) {
-			flex: 0 0 49rem;
+			flex: 0 0 70rem;
 		}
 	}
 	&__title {
@@ -117,33 +120,28 @@
 	}
 
 	&__link {
-		font-size: 1.6rem;
-		line-height: 2.5rem;
-		text-align: center;
-		color: $white;
-		background: linear-gradient(90deg, #6078ff 0%, #794cd6 100%, #794cd6 100%);
-		box-shadow: 0px 0.1rem 1.2rem rgba(0, 0, 0, 0.11);
-		border-radius: 1rem;
-		padding: 20px 50px;
-		svg {
-			margin-left: 15px;
-		}
+		@include button;
 	}
 
 	&__images {
-		width: 23rem;
-		height: 38rem;
+		position: relative;
+		width: 9rem;
+		height: 18rem;
 		background-image: url(../../images/header-bg.png);
 		background-position: center center;
 		background-size: contain;
 		background-repeat: no-repeat;
 		@media (min-width: 768px) {
-			width: 43rem;
-			height: 48rem;
+			width: 23rem;
+			height: 30rem;
 		}
 		@media (min-width: 1024px) {
-			width: 63rem;
-			height: 58rem;
+			width: 43rem;
+			height: calc(100% - 45);
+		}
+		@media (min-width: 1200px) {
+			width: 56rem;
+			height: 56rem;
 		}
 	}
 }
