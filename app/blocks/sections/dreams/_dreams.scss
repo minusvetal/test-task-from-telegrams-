@@ -13,13 +13,7 @@
 	position: relative;
 	background-image: url("../../../images/dreams/ellipse-bg.png");
 	background-size: cover;
-	animation-name: yoyo;
-	animation-duration: 10s;
-	animation-iteration-count: 1;
-	animation-timing-function: linear;
 	&__item {
-		width: 10rem;
-		height: 10rem;
 		overflow: hidden;
 		&:nth-child(1) {
 			.dreams-users__img {
@@ -28,6 +22,15 @@
 				left: 13%;
 				width: 7rem;
 				height: 7rem;
+			}
+			&:hover {
+				.dreams-users__comment {
+					position: absolute;
+					top: -2%;
+					left: 15%;
+					opacity: 1;
+					display: flex;
+				}
 			}
 		}
 		&:nth-child(2) {
@@ -38,6 +41,15 @@
 				width: 5rem;
 				height: 5rem;
 			}
+			&:hover {
+				.dreams-users__comment {
+					position: absolute;
+					top: -12%;
+					right: 18%;
+					opacity: 1;
+					display: flex;
+				}
+			}
 		}
 		&:nth-child(3) {
 			.dreams-users__img {
@@ -46,6 +58,15 @@
 				right: 3%;
 				width: 7.8rem;
 				height: 7.8rem;
+			}
+			&:hover {
+				.dreams-users__comment {
+					position: absolute;
+					top: -1%;
+					right: -6%;
+					opacity: 1;
+					display: flex;
+				}
 			}
 		}
 		&:nth-child(4) {
@@ -56,6 +77,15 @@
 				width: 4.6rem;
 				height: 4.6rem;
 			}
+			&:hover {
+				.dreams-users__comment {
+					position: absolute;
+					top: 39%;
+					right: -3%;
+					opacity: 1;
+					display: flex;
+				}
+			}
 		}
 		&:nth-child(5) {
 			.dreams-users__img {
@@ -64,6 +94,15 @@
 				right: 7%;
 				width: 7rem;
 				height: 7rem;
+			}
+			&:hover {
+				.dreams-users__comment {
+					position: absolute;
+					bottom: 22%;
+					right: -4%;
+					opacity: 1;
+					display: flex;
+				}
 			}
 		}
 		&:nth-child(6) {
@@ -74,6 +113,16 @@
 				width: 7rem;
 				height: 7rem;
 			}
+
+			&:hover {
+				.dreams-users__comment {
+					position: absolute;
+					bottom: 33%;
+					right: 29%;
+					opacity: 1;
+					display: flex;
+				}
+			}
 		}
 		&:nth-child(7) {
 			.dreams-users__img {
@@ -82,6 +131,15 @@
 				left: 6%;
 				width: 7.8rem;
 				height: 7.8rem;
+			}
+			&:hover {
+				.dreams-users__comment {
+					position: absolute;
+					bottom: 28%;
+					left: 8%;
+					opacity: 1;
+					display: flex;
+				}
 			}
 		}
 		&:nth-child(8) {
@@ -92,6 +150,15 @@
 				width: 5.1rem;
 				height: 5.1rem;
 			}
+			&:hover {
+				.dreams-users__comment {
+					position: absolute;
+					top: 34%;
+					left: 5%;
+					opacity: 1;
+					display: flex;
+				}
+			}
 		}
 		&:nth-child(9) {
 			.dreams-users__img {
@@ -100,6 +167,13 @@
 				right: 32%;
 				width: 14.2rem;
 				height: 14.2rem;
+			}
+			.dreams-users__comment {
+				position: absolute;
+				top: 18%;
+				right: 30%;
+				opacity: 1;
+				display: flex;
 			}
 		}
 	}
@@ -113,13 +187,66 @@
 			height: 10rem;
 		}
 	}
+	&__comment {
+		display: flex;
+		@include flex-between-center;
+		width: 11rem;
+		height: 3.5rem;
+		font-size: 1.2rem;
+		font-weight: 600;
+		line-height: 2rem;
+		color: $white;
+		box-shadow: 0 0 1.5rem rgba(187, 187, 187, 1);
+		border-radius: 0.5rem;
+		background-color: rgba(255, 71, 87, 1);
+		padding: 0.5rem;
+		opacity: 0;
+		display: none;
+		transition: all 0.5s ease-in;
+		&:after {
+			content: "";
+			border: 1.2rem solid transparent;
+			border-top: 1.2rem solid rgba(255, 71, 87, 1);
+			position: absolute;
+			left: 50%;
+			margin-left: -1.2rem;
+			bottom: -2.4rem;
+			width: 0;
+		}
+
+		.icon-heart {
+			width: 1.5rem;
+			height: 1.5rem;
+			align-items: center;
+			margin: 0.3rem;
+			fill: $white;
+		}
+		.icon-comment {
+			width: 1.5rem;
+			height: 1.5rem;
+			margin: 0.3rem;
+			fill: $white;
+		}
+		.icon-user {
+			width: 2rem;
+			height: 3rem;
+			margin: 0.3rem;
+			fill: $white;
+		}
+	}
 }
 
-@keyframes yoyo {
-	from {
-		transform: rotate(0deg);
+.dreams-description {
+	flex: 0 0 50.5rem;
+	&__title {
+		@include title;
+		font-size: 2.4rem;
+		line-height: 150%;
 	}
-	to {
-		transform: rotate(360deg);
+	&__text {
+		flex: 0 0 46.8rem;
+		font-size: 1.6rem;
+		line-height: 150%;
+		color: #111111;
 	}
 }
