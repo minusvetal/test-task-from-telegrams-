@@ -1,0 +1,206 @@
+.services {
+	padding-top: 5.6rem;
+	padding-bottom: 9.4rem;
+	background-color: $blue;
+	background-image: url("../../../images/decoration/services-bg-tl.png"),
+		url("../../../images/decoration/services-bg-bl.png"),
+		url("../../../images/decoration/services-bg-tr.png"),
+		url("../../../images/decoration/services-bg-br.png");
+	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+	background-size: 15% 25%, 15% 25%, 15% 25%, 15% 25%, 15% 25%;
+	background-position: 5% 5%, 5% 70%, 95% 5%, 95% 70%;
+	color: $white;
+}
+
+.services-container {
+	@include flex-between-center;
+	flex-wrap: wrap;
+}
+
+.services-info {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 3.6rem;
+	&__title {
+		font-weight: 900;
+		font-size: 4.6rem;
+		line-height: 5.5rem;
+		letter-spacing: 0.05rem;
+		padding-bottom: 2.2rem;
+	}
+	&__text {
+		font-size: 2rem;
+		line-height: 3.2rem;
+		letter-spacing: 0.5rem;
+	}
+}
+
+.services-card {
+	width: 32.5%;
+	overflow: hidden;
+	position: relative;
+	padding-bottom: 4.1rem;
+	box-shadow: 0px 0.01rem 2rem rgba(0, 0, 0, 0.03);
+	border-radius: 2.5rem;
+	background-color: $white;
+	color: $black;
+	margin-top: 1.2rem;
+	hr {
+		background: $gray;
+		opacity: 0.52;
+	}
+	&__round {
+		position: absolute;
+		top: -13%;
+		left: 25%;
+		width: 20rem;
+		height: 20rem;
+		border-radius: 100%;
+	}
+	&__discount {
+		position: relative;
+		font-weight: 600;
+		font-size: 2.8rem;
+		line-height: 150%;
+		text-align: center;
+		color: $white;
+		margin-top: 1.6rem;
+		z-index: 1;
+		margin-bottom: 4rem;
+	}
+	&__title {
+		text-align: center;
+		font-weight: 600;
+		font-size: 2rem;
+
+		line-height: 150%;
+		color: #333333;
+		margin-bottom: 1.6rem;
+	}
+	&__price {
+		align-items: center;
+		padding: 2.5rem 4rem 2.3rem 5rem;
+		line-height: 150%;
+		&-old {
+			position: relative;
+			font-weight: 600;
+			font-size: 2.2rem;
+			color: #778da3;
+			margin-right: 0.5rem;
+			&::after {
+				content: "";
+				position: absolute;
+				top: -30%;
+				left: 45%;
+				width: 0.2rem;
+				height: 4rem;
+				background: #778da3;
+				transform: rotate(55deg);
+			}
+		}
+		&-new {
+			font-weight: 600;
+			font-size: 3.8rem;
+			color: #33c3e5;
+		}
+		&-subsc {
+			font-size: 1.6rem;
+			line-height: 150%;
+			color: #333333;
+			b {
+				font-weight: 600;
+			}
+		}
+		&-package {
+			display: block;
+			font-size: 1.6rem;
+			line-height: 150%;
+			text-align: center;
+			color: #778da3;
+		}
+	}
+	&__mode {
+		position: relative;
+		padding: 2rem 6.2rem;
+		background: $color-bg;
+		text-align: center;
+		line-height: 150%;
+		&-time {
+			@include flex-center;
+			font-size: 1.6rem;
+			line-height: 150%;
+			color: $gray;
+		}
+		&-start {
+			@include flex-center;
+			font-size: 1.6rem;
+			line-height: 150%;
+			color: $gray;
+		}
+	}
+	&__list {
+		padding: 3rem;
+		&-item {
+			@include flex-center;
+			font-size: 16px;
+			line-height: 150%;
+			margin-bottom: 3rem;
+			color: #333333;
+		}
+	}
+	&__btn {
+		@include button;
+		width: 100%;
+		span {
+			margin-left: 3.2rem;
+		}
+	}
+	&__blue {
+		.services-card__round {
+			background-color: rgba(51, 195, 229, 1);
+		}
+		.icon-services-clock,
+		.icon-services-start {
+			margin-top: 4px;
+			margin-right: 0.8rem;
+			fill: rgba(51, 195, 229, 1);
+			padding: 0;
+		}
+	}
+	&__pink {
+		.services-card__round {
+			background-color: #f8498c;
+		}
+		.icon-services-clock,
+		.icon-services-start {
+			margin-right: 0.8rem;
+			fill: #f8498c;
+		}
+	}
+	&__orange {
+		.services-card__round {
+			background-color: #f3c65b;
+		}
+		.icon-services-clock,
+		.icon-services-start {
+			margin-right: 0.8rem;
+			fill: #f3c65b;
+		}
+	}
+	.icon-svg {
+		width: 1.8rem;
+		height: 1.8rem;
+	}
+	.icon-checked {
+		width: 1.1remx;
+		height: 1.5rem;
+		fill: #55d989;
+		margin-right: 0.8rem;
+	}
+	.icon-arrow-btn {
+		width: 1rem;
+		height: 1rem;
+		fill: $white;
+		right: 0;
+	}
+}
