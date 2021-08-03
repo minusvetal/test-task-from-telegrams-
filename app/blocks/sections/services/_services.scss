@@ -13,7 +13,7 @@
 }
 
 .services-container {
-	@include flex-between-center;
+	@include flex-between-start;
 	flex-wrap: wrap;
 }
 
@@ -51,7 +51,7 @@
 	}
 	&__round {
 		position: absolute;
-		top: -13%;
+		top: -11rem;
 		left: 25%;
 		width: 20rem;
 		height: 20rem;

@@ -1,0 +1,96 @@
+.about {
+	padding-top: 7.4rem;
+	padding-bottom: 6rem;
+	background-color: #e5e5e5;
+	z-index: -1;
+}
+.about-container {
+	position: relative;
+}
+.about-title {
+	@include title;
+	z-index: 1;
+	&:before {
+		width: 72rem;
+	}
+}
+.about-slider {
+	@include flex-between-center;
+	margin: 0 auto;
+	max-width: 96rem;
+	height: 40rem;
+	padding-bottom: 40rem;
+	padding-top: 7rem;
+	min-width: 0;
+	font-size: 2rem;
+	overflow: hidden;
+}
+.swiper-pagination {
+	padding-top: 2rem;
+	height: 2rem;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+	position: absolute;
+	width: 3.6rem;
+	height: 3.6rem;
+	background-color: $blue;
+	border-radius: 50%;
+	color: $white;
+	font-size: 1.6rem;
+	line-height: 3.4rem;
+	text-align: center;
+}
+.swiper-slide {
+	max-width: 30rem;
+	max-height: 37rem;
+}
+.about-carusel {
+	&__item {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-end;
+		min-width: calc(100% / 3.1);
+		min-height: 37rem;
+		margin: 0.5rem;
+		margin-bottom: 1rem;
+		padding: 30px 40px 20px;
+		background-color: $white;
+		.star {
+			margin-bottom: 1.8rem;
+		}
+		.about-carusel__text {
+			max-height: 22rem;
+			font-size: 1.4rem;
+			line-height: 150%;
+			color: $title;
+			margin-bottom: 2rem;
+			overflow: hidden;
+		}
+	}
+	&__author {
+		display: flex;
+		align-items: center;
+		&-avatar {
+			width: 6rem;
+			height: 6rem;
+			object-fit: cover;
+			border-radius: 50%;
+			margin-right: 1.4rem;
+		}
+		&-info {
+			flex-wrap: wrap;
+		}
+		&-name {
+			font-weight: 600;
+			font-size: 1.6rem;
+			line-height: 1.9rem;
+			color: $title;
+		}
+		&-date {
+			font-size: 1.4rem;
+			line-height: 150%;
+			color: #aeaeae;
+		}
+	}
+}

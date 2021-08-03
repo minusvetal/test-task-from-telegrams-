@@ -24,11 +24,14 @@
     "gulp-sass": "^5.0.0",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-svgmin": "^4.0.1",
-    "sass": "^1.36.0"
+    "jquery": "^3.6.0",
+    "rateyo": "^3.0.0-alpha.2",
+    "sass": "^1.37.0",
+    "swiper": "^6.8.0"
   },
   "dependencies": {
     "@babel/core": "^7.14.8",
-    "@babel/preset-env": "^7.14.8",
+    "@babel/preset-env": "^7.14.9",
     "babel-core": "^6.26.3",
     "babel-loader": "8",
     "babel-preset-env": "^1.7.0",
@@ -59,9 +62,8 @@
     "postcss-discard-comments": "^5.0.1",
     "postcss-discard-duplicates": "^5.0.1",
     "postcss-import": "^14.0.2",
-    "swiper": "^6.8.0",
     "util": "^0.12.4",
-    "webpack": "^5.47.0",
+    "webpack": "^5.48.0",
     "webpack-stream": "^6.1.2"
   }
 }
