@@ -1,4 +1,4 @@
-//Make sure that the dom is ready
+//звезданутый рейтинг
 $(function () {
 	$(".star").rateYo({
 		starWidth: "16px",

@@ -1,0 +1,123 @@
+.questions {
+	padding: 6rem 0;
+	text-align: center;
+	&__title {
+		@include title;
+		&:before {
+			width: 46rem;
+		}
+	}
+	&__text {
+		font-size: 1.6rem;
+		line-height: 150%;
+		color: #aeaeae;
+	}
+}
+
+/* Start Accordion Menu */
+
+.acor-container {
+	margin-top: 5.2rem;
+	width: 100%;
+	text-align: left;
+}
+.acor-body {
+	width: 100%;
+	height: 0;
+	margin: 0 auto;
+	background: #fbfbfd;
+	border-radius: 1rem;
+	background-color: $blue;
+	padding: 0 3rem;
+	transition: color 0.5s, padding 0.5s;
+}
+.acor-container .acor-body p {
+	// margin: 0 0 10px;
+	display: none;
+	color: $white;
+	font-size: 1.6rem;
+	line-height: 150%;
+}
+.acor-container label {
+	position: relative;
+	border-radius: 10px;
+	cursor: pointer;
+	background-color: #fbfbfd;
+	display: block;
+	padding: 3rem 5rem;
+	width: 100%;
+	font-weight: 600;
+	font-size: 1.8rem;
+	line-height: 150%;
+	color: $black;
+	z-index: 5;
+	margin: 0 0 5px;
+	.icon-line {
+		display: none;
+	}
+}
+.acor-container label:hover {
+	background-color: $blue;
+	color: $white;
+	&:before {
+		content: "+";
+		font-size: 4rem;
+		color: $white;
+		transition: transform 0.5s;
+		transform: rotate(240deg);
+	}
+}
+.acor-container input {
+	display: none;
+}
+.acor-container label:before {
+	content: "+";
+	position: absolute;
+	font-size: 4rem;
+	color: $blue;
+	right: 5%;
+	transition: transform 0.5s;
+	transform: rotate(360deg);
+}
+
+.acor-container input:checked + label:before {
+	content: "-";
+	font-size: 4rem;
+	color: $white;
+	transition: transform 0.5s;
+	transform: rotate(540deg);
+}
+.acor-container input:checked + label + .acor-body {
+	height: auto;
+	padding: 3rem 2rem;
+	font-size: 1.6rem;
+	line-height: 150%;
+}
+.acor-container input:checked + label + .acor-body p {
+	display: block;
+}
+.acor-container input:checked + label + .acor-body {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	display: block;
+}
+.acor-container input:checked + label {
+	display: block;
+	align-items: center;
+	background-color: $blue;
+	color: $white;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	margin: 0;
+	.icon-line {
+		display: block;
+		align-items: center;
+		fill: $white;
+		width: 7rem;
+		height: 0.2rem;
+	}
+
+	span {
+		margin-left: 5rem;
+	}
+}
