@@ -1,20 +1,20 @@
-.about {
+.feedback {
 	padding-top: 7.4rem;
 	padding-bottom: 6rem;
 	background-color: #e5e5e5;
 	z-index: -1;
 }
-.about-container {
+.feedback-container {
 	position: relative;
 }
-.about-title {
+.feedback-title {
 	@include title;
 	z-index: 1;
 	&:before {
 		width: 72rem;
 	}
 }
-.about-slider {
+.feedback-slider {
 	@include flex-between-center;
 	margin: 0 auto;
 	max-width: 96rem;
@@ -46,7 +46,7 @@
 	max-width: 30rem;
 	max-height: 37rem;
 }
-.about-carusel {
+.feedback-carusel {
 	&__item {
 		display: flex;
 		flex-direction: column;
@@ -61,7 +61,7 @@
 		.star {
 			margin-bottom: 1.8rem;
 		}
-		.about-carusel__text {
+		.feedback-carusel__text {
 			display: flex;
 			max-height: 22rem;
 			font-size: 1.4rem;

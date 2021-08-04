@@ -1,3 +1,68 @@
+.footer-container {
+	@include flex-between-start;
+	padding: 7.5rem 0;
+}
+
 .footer {
-    
+	&__title {
+		font-weight: 600;
+		font-size: 1.6rem;
+		line-height: 1.9rem;
+		color: #202020;
+		text-transform: uppercase;
+	}
+	.icon-up-arrow {
+		width: 2rem;
+		height: 2rem;
+		fill: $white;
+	}
+	.scrollup {
+		position: fixed; /* фиксированная позиция */
+		color: #fff; /* цвет текста */
+		text-align: center; /*выравнивание содержимого элемента по центру */
+		background-color: $blue; /* цвет заднего фона */
+		right: 5rem; /* расстояние от правого края */
+		bottom: 0; /* расстояние от нижнего края */
+		padding: 1rem 1rem; /* отступы до содержимого блока */
+		border-top-left-radius: 0.4rem; /* скругление верхнего левого угла */
+		border-top-right-radius: 0.4rem; /* скругление верхнего правого угла */
+		cursor: pointer; /* форма курсора */
+		display: none; /* не отображать элемент */
+		box-shadow: 0 0 1rem 0.4rem rgba(0, 0, 0, 0.3);
+	}
+	.scrollup:hover {
+		background-color: #000; /* цвет заднего фона при наведении */
+
+		.icon-up-arrow {
+			fill: $blue;
+		}
+	}
+}
+.footer-menu,
+.footer-privacy,
+.footer-about {
+	flex: 0 0 30%;
+	height: 100%;
+	li {
+		margin-top: 1.5rem;
+		font-size: 1.4rem;
+		line-height: 150%;
+		color: #202020;
+	}
+}
+
+.footer-about {
+	&__text {
+		font-size: 1.4rem;
+		line-height: 150%;
+		color: #202020;
+		margin-top: 2rem;
+		margin-bottom: 2.5rem;
+	}
+	span {
+		font-weight: 600;
+		font-size: 1.4rem;
+		line-height: 1.7rem;
+		color: #202020;
+	}
 }
